@@ -6,12 +6,14 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
-x=int(input("Enter a number "))
-count=0
-i=2
-while(count<x):
-    if is_prime(i):
-        print(i)
-        count+=1
-    i+=1
-        
+
+n = int(input("Enter n: "))
+
+count = 0
+num = 2
+
+while count < n:
+    if is_prime(num):
+        print(num, end=" ")
+        count += 1
+    num += 1    

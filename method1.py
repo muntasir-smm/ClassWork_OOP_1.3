@@ -28,7 +28,7 @@ choice = int(input("Enter your choice (1-3): "))
 if choice == 1:
     x = float(input("Enter length: "))
     y = float(input("Enter width: "))
-    print("Area of Rectangle =", areaRectangle(x, y))
+    print(f"Area of Rectangle = {areaRectangle(x, y):.2f}")
 
 elif choice == 2:
     base = float(input("Enter base: "))
