@@ -3,6 +3,7 @@
 n=int(input("Enter a number: "))
 sum=0
 fibo=1
+print(f"First {n} Fibonacci numbers are: ")
 for i in range(n):
     print(sum, end=" ")
     sum,fibo=fibo,sum+fibo

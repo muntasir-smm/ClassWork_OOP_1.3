@@ -1,10 +1,12 @@
-'''11. Write a python program to generate the following patterns:
-(c)
-         *
-       * *
-      * * *
-    * * * *
-   * * * * *'''
+'''
+11(c). Write a python program to generate the following patterns:
+
+      *
+     * *
+    * * *
+   * * * *
+  * * * * *
+'''
 
 for i in range(1,6):
-    print(" " * (6 - i) + "* " * i)
+  print(" " * (6 - i) + "* " * i)

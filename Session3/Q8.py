@@ -1,11 +1,13 @@
-# 8. Write a python program to show summation of first 10 bnacci numbers.
+# 8. Write a python program to show summation of first 10 Fibonacci numbers.
 
 # n=int(input("Enter a number: "))
-a=0
-b=1
+f1=0
+f2=1
 Total=0
-for i in range(5):
-    Total+=a
-    # print(a, end=" ")
-    a,b=b,a+b
-print(Total)
+print("First 10 Fibonacci numbers are :")
+for i in range(10):
+    Total+=f1
+    print(f1, end=" ")
+    f1,f2=f2,f1+f2
+print()
+print("Sum= ",Total)

@@ -4,3 +4,6 @@ sum=0
 for i in range(1,11):
     sum+=i
 print("Sum = ",sum)
+
+print("Sum= n*(n+1)/2")
+print("Sum =",10*11/2) # Sum= n*(n+1)/2

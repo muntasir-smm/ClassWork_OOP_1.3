@@ -7,12 +7,13 @@ def is_prime(n):
             return False
     return True
 
-n = int(input("Enter n: "))
+n = int(input("Enter a number: "))
 
 count = 0
 num = 2
 
-while count < n:
+print(f"First {n} prime numbers are: ")
+while (count < n):
     if is_prime(num):
         print(num, end=" ")
         count += 1
