@@ -1,4 +1,5 @@
-# 1. Write a python method called checkNumber() that takes a number and find whether the number is even or odd.
+'''1. Write a python method called checkNumber() that takes a number and find whether the number is even or odd.'''
+
 def checkNumber(num):
     if num % 2 == 0:
         return "Even"
@@ -6,7 +7,8 @@ def checkNumber(num):
         return "Odd"
 
 
-# 2. Write a python method called isDivisible() that takes a number as an argument and find whether the number is divisible by 3.
+'''2. Write a python method called isDivisible() that takes a number as an argument and find whether the number is divisible by 3.'''
+
 def isDivisible(num):
     if num % 3 == 0:
         return "Divisible by 3"
@@ -14,7 +16,8 @@ def isDivisible(num):
         return "Not Divisible by 3"
 
 
-# 3. Write a python method called isLeapYear() that takes a year as an argument and find whether that year is a leap year.
+'''3. Write a python method called isLeapYear() that takes a year as an argument and find whether that year is a leap year.'''
+
 def isLeapYear(year):
     if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
         return "Leap Year"
@@ -22,7 +25,8 @@ def isLeapYear(year):
         return "Not a Leap Year"
 
 
-# 4. Write a python method called WeatherAnalyzer() that takes the temperature as an argument and find the type of temperature.
+'''4. Write a python method called WeatherAnalyzer() that takes the temperature as an argument and find the type of temperature.'''
+
 def WeatherAnalyzer(temp):
     if temp < 10:
         return "Cold"
@@ -32,12 +36,14 @@ def WeatherAnalyzer(temp):
         return "Hot"
 
 
-# 5. Write a python method called isMax()  that takes a list of numbers as an argument and find the maximum number from the list.
+'''5. Write a python method called isMax()  that takes a list of numbers as an argument and find the maximum number from the list.'''
+
 def isMax(numbers):
     return max(numbers)
 
 
-# 6. Write a python method called NumType() that takes a number as an argument and find whether the number zero or positive or negative.
+'''6. Write a python method called NumType() that takes a number as an argument and find whether the number zero or positive or negative.'''
+
 def NumType(num):
     if num > 0:
         return "Positive"
@@ -47,12 +53,14 @@ def NumType(num):
         return "Zero"
 
 
-# 7. Write a python method called isMin() that takes a list of numbers as an argument and find the minimum number from the list.
+'''7. Write a python method called isMin() that takes a list of numbers as an argument and find the minimum number from the list.'''
+
 def isMin(numbers):
     return min(numbers)
 
 
-# 8. Write a python method called isVowel() that takes a letter as an argument and find whether the letter entered by the user is a vowel or not.
+'''8. Write a python method called isVowel() that takes a letter as an argument and find whether the letter entered by the user is a vowel or not.'''
+
 def isVowel(letter):
     if letter.lower() in "aeiou":
         return "Vowel"
@@ -60,7 +68,8 @@ def isVowel(letter):
         return "Not a Vowel"
 
 
-# 9. Write a python method called charType() that takes a character as an argument and find whether the character entered by the user is a vowel, or a consonant, or a number.
+'''9. Write a python method called charType() that takes a character as an argument and find whether the character entered by the user is a vowel, or a consonant, or a number.'''
+
 def charType(ch):
     if ch.isdigit():
         return "Number"
@@ -99,19 +108,22 @@ def letterGrade(mark):
         return "F"
 
 
-# 11. Write a python method called MoonWeigh() that takes a weight (in kg) of human on earth as an argument and find how much she/he weighs on the moon. (note that your moon weight is 16.5% of your Earth weight)
+'''11. Write a python method called MoonWeigh() that takes a weight (in kg) of human on earth as an argument and find how much she/he weighs on the moon. (note that your moon weight is 16.5% of your Earth weight)'''
+
 def MoonWeigh(weight):
     return weight * 0.165
 
 
-# 12. Write a python method called FahToKel() that takes  a temperature in Fahrenheit as an argument and determine the temperature in Kelvin. Formula: Kelvin = (Farh – 32) x 5/9 + 273.15.
+'''12. Write a python method called FahToKel() that takes  a temperature in Fahrenheit as an argument and determine the temperature in Kelvin. Formula: Kelvin = (Farh – 32) x 5/9 + 273.15.'''
+
 def FahToKel(fahr):
     kelvin = (fahr - 32) * 5 / 9 + 273.15
     return kelvin
 
 
 
-# 13. Write a python method called fiboNum() that takes an integer n as an argument and generates n Fibonacci numbers.
+'''13. Write a python method called fiboNum() that takes an integer n as an argument and generates n Fibonacci numbers.'''
+
 def fiboNum(n):
     a, b = 0, 1
     fib = []
@@ -121,7 +133,8 @@ def fiboNum(n):
     return fib
 
 
-# 14. Write a python method called facNum() that takes an integer n as an argument and generates the factorial of n.
+'''14. Write a python method called facNum() that takes an integer n as an argument and generates the factorial of n.'''
+
 def facNum(n):
     fact = 1
     for i in range(1, n + 1):
@@ -129,7 +142,8 @@ def facNum(n):
     return fact
 
 
-# 15. Write a python method called isPrime() that takes an integer n as an argument and find whether the number is prime or not.
+'''15. Write a python method called isPrime() that takes an integer n as an argument and find whether the number is prime or not.'''
+
 def isPrime(n):
     if n <= 1:
         return "Not Prime"
@@ -144,7 +158,7 @@ def add(nums):
     return sum(nums)
 
 
-print(add([2, 5, 9, 1]))       # 9
+print(add([2, 5, 9, 1]))       
 
 # print(checkNumber(8))            # Even
 # print(isDivisible(15))           # Divisible by 3
