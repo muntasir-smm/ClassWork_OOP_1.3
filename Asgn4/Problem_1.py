@@ -10,7 +10,7 @@ class Car(Vehicle):
         super().__init__(brand, year)
         self.num_doors=num_doors
         self.fuel_type=fuel_type
-    def get_data(self):
+    def get_info(self):
         return f'{self.brand}, {self.year}, {self.num_doors} doors, {self.fuel_type}'
   
     
@@ -20,7 +20,7 @@ class Motorcycle(Vehicle):
         super().__init__(brand, year)
         self.has_sidecar=has_sidecar 
         self.engine_size=engine_size
-    def get_motoData(self):
+    def get_info(self):
         return f'{self.brand}, {self.year},{"No" if self.has_sidecar==False else "Has sidecar" } sidecar,{self.engine_size}cc'
 
     
@@ -30,7 +30,7 @@ class Motorcycle(Vehicle):
 def main():
     Gari= Car("Toyota",2020,4,"Petrol")
     Hunda= Motorcycle("Honda",2021,False,500)
-    print(Gari.get_data())
-    print(Hunda.get_motoData())
+    print(Gari.get_info())
+    print(Hunda.get_info())
 
 main()
