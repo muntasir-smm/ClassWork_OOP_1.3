@@ -5,7 +5,7 @@ class Vehicle:
         self.year = year
 
     def get_info(self):
-        return f"{self.brand}, {self.year}"
+        return (f"{self.brand}, {self.year}")
 
 
 class Car(Vehicle):
@@ -16,25 +16,23 @@ class Car(Vehicle):
         self.fuel_type = fuel_type
 
     def get_info(self):
-        return f"{self.brand}, {self.year}, {self.num_doors} doors, {self.fuel_type}"
+        return (f"{self.brand}, {self.year}, {self.num_doors} doors, {self.fuel_type}")
 
 
 class Motorcycle(Vehicle):
 
-    def __init__(
-        self, brand, year, has_sidecar, engine_size
-    ):
+    def __init__(self, brand, year, has_sidecar, engine_size):
         Vehicle.__init__(self,brand, year)
         self.has_sidecar = has_sidecar
         self.engine_size = engine_size
 
     def get_info(self):
-            return f"{self.brand}, {self.year},{"No" if self.has_sidecar==False else "Has sidecar" } sidecar,{self.engine_size}cc"
+            return (f"{self.brand}, {self.year},{"No sidecar" if self.has_sidecar==False else "Has sidecar" },{self.engine_size}cc")
 
-car = Car(brand="Toyota", year=2020, num_doors=4, fuel_type="Petrol")
-motorcycle = Motorcycle(
-    brand="Honda", year=2021, has_sidecar=False, engine_size=500
-)
+def main():
+    car1 = Car("Toyota", 2020, 4, "Petrol")
+    motorcycle1 = Motorcycle("Honda", 2021, True, 500)
+    print(car1.get_info())
+    print(motorcycle1.get_info())
 
-print(car.get_info())
-print(motorcycle.get_info())
+main()
