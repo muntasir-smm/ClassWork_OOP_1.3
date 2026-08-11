@@ -5,10 +5,7 @@ class Pet:
         self.price = price
 
     def get_description(self):
-        formatted_price = (
-            int(self.price) if self.price.is_integer() else self.price
-        )
-        return f"{self.name}, ${formatted_price}"
+        return f"{self.name}, ${self.price}"
 
 
 class Dog(Pet):
@@ -19,7 +16,7 @@ class Dog(Pet):
         self.weight = weight
 
     def get_description(self):
-        return f"{super().get_description()}, {self.breed}, {self.weight}kg"
+        return f"{self.name}, ${self.price}, {self.breed}, {self.weight} Kg"
 
 
 class Cat(Pet):
@@ -30,13 +27,13 @@ class Cat(Pet):
         self.is_indoor = is_indoor
 
     def get_description(self):
-        indoor_str = "Indoor" if self.is_indoor else "Outdoor"
-        return f"{super().get_description()}, {self.color}, {indoor_str}"
+        return f"{self.name}, ${self.price}, {self.color}, {"Indoor" if self.is_indoor==True else "Outdoor"}"
 
 
-# Test implementation
-dog = Dog(name="Buddy", price=500.0, breed="Labrador", weight=30.5)
-cat = Cat(name="Whiskers", price=300.0, color="Black", is_indoor=True)
+def main():
+    Kukur= Dog("Buddy",500.0,"Labrador",30.5)
+    print(Kukur.get_description())
+    Biral=Cat("Whiskers",300.0,'Black',True)
+    print(Biral.get_description())
 
-print(dog.get_description())
-print(cat.get_description())
+main()

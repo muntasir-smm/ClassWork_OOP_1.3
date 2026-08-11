@@ -1,36 +1,35 @@
 class Vehicle:
 
-    def __init__(self, brand: str, year: int):
+    def __init__(self, brand, year):
         self.brand = brand
         self.year = year
 
-    def get_info(self) -> str:
+    def get_info(self):
         return f"{self.brand}, {self.year}"
 
 
 class Car(Vehicle):
 
-    def __init__(self, brand: str, year: int, num_doors: int, fuel_type: str):
+    def __init__(self, brand, year, num_doors, fuel_type):
         super().__init__(brand, year)
         self.num_doors = num_doors
         self.fuel_type = fuel_type
 
-    def get_info(self) -> str:
-        return f"{super().get_info()}, {self.num_doors} doors, {self.fuel_type}"
+    def get_info(self):
+        return f"{self.brand}, {self.year}, {self.num_doors} doors, {self.fuel_type}"
 
 
 class Motorcycle(Vehicle):
 
     def __init__(
-        self, brand: str, year: int, has_sidecar: bool, engine_size: int
+        self, brand, year, has_sidecar, engine_size
     ):
         super().__init__(brand, year)
         self.has_sidecar = has_sidecar
         self.engine_size = engine_size
 
-    def get_info(self) -> str:
-        sidecar_str = "Sidecar" if self.has_sidecar else "No sidecar"
-        return f"{super().get_info()}, {sidecar_str}, {self.engine_size}cc"
+    def get_info(self):
+            return f"{self.brand}, {self.year},{"No" if self.has_sidecar==False else "Has sidecar" } sidecar,{self.engine_size}cc"
 
 
 # Test implementation

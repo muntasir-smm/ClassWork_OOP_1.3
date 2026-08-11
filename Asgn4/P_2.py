@@ -32,13 +32,11 @@ class DVD(LibraryItem):
         return f"{self.title} by {self.director} is available"
 
 
-# Test implementation
-book = Book(
-    title="Python Basics", item_id="B123", author="John Smith", pages=300
-)
-dvd = DVD(
-    title="Python Tutorial", item_id="D456", director="Jane Doe", duration=120
-)
+def main():
+   Boi=Book("Python Basics","B123","John Smith",300)
+   print(Boi.check_availability())
+   video_dekho=DVD("Python Tutorial","D456","Jane Doe",120)
+   print(video_dekho.check_availability())
+   
 
-print(book.check_availability())
-print(dvd.check_availability())
+main()

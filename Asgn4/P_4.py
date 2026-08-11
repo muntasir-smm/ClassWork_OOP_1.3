@@ -5,10 +5,7 @@ class Furniture:
         self.price = price
 
     def get_details(self):
-        formatted_price = (
-            int(self.price) if self.price.is_integer() else self.price
-        )
-        return f"{self.material}, ${formatted_price}"
+        return f"{self.material}, ${self.price}"
 
 
 class Chair(Furniture):
@@ -21,13 +18,7 @@ class Chair(Furniture):
         self.seat_height = seat_height
 
     def get_details(self):
-        armrests_str = "Armrests" if self.has_armrests else "No armrests"
-        height_str = (
-            f"{int(self.seat_height)}cm"
-            if self.seat_height.is_integer()
-            else f"{self.seat_height}cm"
-        )
-        return f"{super().get_details()}, {armrests_str}, {height_str}"
+        return f"{self.material}, ${self.price},{"Armrests" if self.has_armrests==True else "No Armrests"}, {self.seat_height} cm"
 
 
 class Table(Furniture):
@@ -38,12 +29,16 @@ class Table(Furniture):
         self.leg_count = leg_count
 
     def get_details(self):
-        return f"{super().get_details()}, {self.shape}, {self.leg_count} legs"
+        return f"{self.material}, ${self.price}, {self.shape},{self.leg_count} legs"
 
 
-# Test implementation
-chair = Chair(material="Wood", price=200.0, has_armrests=True, seat_height=45.0)
-table = Table(material="Glass", price=300.0, shape="Rectangular", leg_count=4)
+def main():
+    kath=Chair("Wood",200.0,True,45.0)
+    print()
+    print(kath.get_details())
+    
+    gilas=Table("Glass",300.0,'Rectengular',4)
+    print(gilas.get_details())
+    print()
 
-print(chair.get_details())
-print(table.get_details())
+main()
