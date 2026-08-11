@@ -11,7 +11,7 @@ class Pet:
 class Dog(Pet):
 
     def __init__(self, name, price, breed, weight):
-        super().__init__(name, price)
+        Pet.__init__(self,name, price)
         self.breed = breed
         self.weight = weight
 
@@ -22,7 +22,7 @@ class Dog(Pet):
 class Cat(Pet):
 
     def __init__(self, name, price, color, is_indoor: bool):
-        super().__init__(name, price)
+        Pet.__init__(self,name, price)
         self.color = color
         self.is_indoor = is_indoor
 
@@ -31,9 +31,9 @@ class Cat(Pet):
 
 
 def main():
-    Kukur= Dog("Buddy",500.0,"Labrador",30.5)
-    print(Kukur.get_description())
-    Biral=Cat("Whiskers",300.0,'Black',True)
-    print(Biral.get_description())
+    Dog1= Dog("Buddy",500.0,"Labrador",30.5)
+    print(Dog1.get_description())
+    Cat1=Cat("Whiskers",300.0,'Black',True)
+    print(Cat1.get_description())
 
 main()

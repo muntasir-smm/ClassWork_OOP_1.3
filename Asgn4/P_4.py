@@ -13,7 +13,7 @@ class Chair(Furniture):
     def __init__(
         self, material, price, has_armrests, seat_height
     ):
-        super().__init__(material, price)
+        Furniture.__init__(self,material, price)
         self.has_armrests = has_armrests
         self.seat_height = seat_height
 
@@ -24,7 +24,7 @@ class Chair(Furniture):
 class Table(Furniture):
 
     def __init__(self, material, price, shape, leg_count):
-        super().__init__(material, price)
+        Furniture.__init__(self,material, price)
         self.shape = shape
         self.leg_count = leg_count
 
@@ -33,12 +33,10 @@ class Table(Furniture):
 
 
 def main():
-    kath=Chair("Wood",200.0,True,45.0)
-    print()
-    print(kath.get_details())
+    Chair1=Chair("Wood",200.0,True,45.0)
+    print(Chair1.get_details())
     
-    gilas=Table("Glass",300.0,'Rectengular',4)
-    print(gilas.get_details())
-    print()
+    Table1=Table("Glass",300.0,'Rectengular',4)
+    print(Table1.get_details())
 
 main()

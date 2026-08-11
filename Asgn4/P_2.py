@@ -11,7 +11,7 @@ class LibraryItem:
 class Book(LibraryItem):
 
     def __init__(self, title, item_id, author, pages):
-        super().__init__(title, item_id)
+        LibraryItem.__init__(self,title, item_id)
         self.author = author
         self.pages = pages
 
@@ -24,7 +24,7 @@ class DVD(LibraryItem):
     def __init__(
         self, title, item_id, director, duration
     ):
-        super().__init__(title, item_id)
+        LibraryItem.__init__(self,title, item_id)
         self.director = director
         self.duration = duration
 
@@ -33,10 +33,10 @@ class DVD(LibraryItem):
 
 
 def main():
-   Boi=Book("Python Basics","B123","John Smith",300)
-   print(Boi.check_availability())
-   video_dekho=DVD("Python Tutorial","D456","Jane Doe",120)
-   print(video_dekho.check_availability())
+   Book1=Book("Python Basics","B123","John Smith",300)
+   print(Book1.check_availability())
+   DVD1=DVD("Python Tutorial","D456","Jane Doe",120)
+   print(DVD1.check_availability())
    
 
 main()
