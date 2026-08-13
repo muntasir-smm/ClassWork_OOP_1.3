@@ -12,7 +12,7 @@ if age<18:
     print("You do not qualify for a loan due to age.")
 else:
     income=int(input("Enter your income: "))
-    cs=int(input("Enter your Credit Score(between 300 and 850): "))
+    cs=int(input("Enter your Credit Score (between 300 and 850): "))
     
     if (income>=100000) & (howCs(cs)==3):
         print("Premium loan")
