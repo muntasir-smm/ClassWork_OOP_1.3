@@ -1,5 +1,5 @@
-import string
 from collections import defaultdict
+import string
 
 cName = [
     "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", 
@@ -43,9 +43,12 @@ for country in cName:
 # Print grouped results A-Z
 for letter in string.ascii_uppercase:
     countries = grouped[letter]
-    print(f"\n{len(countries)} Countries start with {letter}.\n")
     
-    if countries:
+    if not countries:
+        print(f"No countries start with {letter}.\n")
+    else:
+        print(f"{len(countries)} Countries start with {letter}:")
         for c in countries:
-            print(c)
+            print(f"  - {c}")
+    print("__________::__________")
         
