@@ -1,0 +1,40 @@
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+    def setmanagersalary(self, obj, newsalary): #public 
+        obj.salary = newsalary
+
+class Manager():
+    def __init__(self, name, salary):
+        self.name = name
+        #self.salary = salary
+        self._salary = salary
+    def getmanagersalary(self, obj):
+        print(obj._salary)
+
+class CEO(Manager):
+    def __init__(self, name, salary):
+        self.name = name
+        self.__salary = salary
+    def setmanagersalary(self, obj, newsalary):
+        obj._salary = newsalary
+    def setceosalary(self, obj, newsalary):
+        obj.__salary = newsalary
+    def getceosalary(self, obj):
+        print(obj.__salary)
+
+emp1 = Employee("Nahid", 25000)
+mg1 = Manager("Atik", 30000)
+emp1.setmanagersalary(mg1, 35000)
+print(mg1.salary)
+mg1.getmanagersalary(mg1)
+ceo1 = CEO("Mehedi", 50000)
+ceo1.setmanagersalary(mg1, 55000)
+mg1.getmanagersalary(mg1)
+ceo1.getmanagersalary(mg1)
+ceo1.getceosalary(ceo1)
+ceo1.setceosalary(ceo1, 270000)
+ceo1.getceosalary(ceo1)
+#mg1.getmanagersalary(ceo1)

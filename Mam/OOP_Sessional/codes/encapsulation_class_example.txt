@@ -1,0 +1,166 @@
+public method
+-------------
+from datetime import date
+
+class Employee:
+    def __init__(self, name, join_date, salary):
+        self.name = name
+        self.join_date = join_date
+        self.salary = salary
+    
+    def setmanagersalary(self, obj, newsalary):
+        obj.salary = newsalary
+    
+    def print_all(self):
+        print("::Employee Information::")
+        print(self.name)
+        print(self.join_date)
+        print(self.salary)
+        print("---------------------")
+
+class Manager:
+    def __init__(self, name, join_date, salary):
+        self.name = name
+        self.join_date = join_date
+        self.salary = salary
+
+    def print_all(self):
+        print("::Manager Information::")
+        print(self.name)
+        print(self.join_date)
+        print(self.salary)
+        print("---------------------")
+
+emp1 = Employee("Nahid", date(2020, 1, 1), 25000)
+emp1.print_all()
+mng1 = Manager("Mehedi", date(2019, 7, 23), 100000)
+mng1.print_all()
+emp1.setmanagersalary(mng1, 50000)
+emp1.print_all()
+mng1.print_all()
+
+
+
+------------
+protected
+------------
+from datetime import date
+
+class Employee:
+    def __init__(self, name, join_date, salary):
+        self.name = name
+        self.join_date = join_date
+        self.salary = salary
+    
+    def setmanagersalary(self, obj, newsalary):
+        obj.salary = newsalary
+    
+    def print_all(self):
+        print("::Employee Information::")
+        print(self.name)
+        print(self.join_date)
+        print(self.salary)
+        print("---------------------")
+
+class Manager:
+    def __init__(self, name, join_date, salary):
+        self.name = name
+        self.join_date = join_date
+        self._salary = salary
+    def getmanagersalary(self, obj):
+        print("Since salary is a protected attribute, it did not change")
+        print(obj._salary)
+
+    def print_all(self):
+        print("::Manager Information::")
+        print(self.name)
+        print(self.join_date)
+        print(self._salary)
+        print("---------------------")
+
+emp1 = Employee("Nahid", date(2020, 1, 1), 25000)
+emp1.print_all()
+mng1 = Manager("Mehedi", date(2019, 7, 23), 100000)
+mng1.print_all()
+emp1.setmanagersalary(mng1, 50000)
+emp1.print_all()
+mng1.print_all()
+mng1.getmanagersalary(mng1)
+
+
+
+--------------
+private member
+---------
+from datetime import date
+
+class Employee:
+    def __init__(self, name, join_date, salary):
+        self.name = name
+        self.join_date = join_date
+        self.salary = salary
+    
+    def setmanagersalary(self, obj, newsalary):
+        obj.salary = newsalary
+    
+    def print_all(self):
+        print("::Employee Information::")
+        print(self.name)
+        print(self.join_date)
+        print(self.salary)
+        print("---------------------")
+
+class Manager:
+    def __init__(self, name, join_date, salary):
+        self.name = name
+        self.join_date = join_date
+        self._salary = salary
+    def getmanagersalary(self, obj):
+        print("Since salary is a protected attribute, it did not change")
+        print(obj._salary)
+
+    def print_all(self):
+        print("::Manager Information::")
+        print(self.name)
+        print(self.join_date)
+        print(self._salary)
+        print("---------------------")
+
+class CEO(Manager):
+    def __init__(self, name, join_date, salary):
+        self.name = name
+        self.join_date = join_date
+        self.__salary = salary
+    def setmanagersalary(self, obj, newsalary):
+        obj._salary = newsalary
+
+    def setCEOsalary(self, obj, newsalary):
+        obj.__salary = newsalary
+    def getCEOsalary(self, obj):
+        print("New salary")
+        print(obj.__salary)
+    
+    def print_all(self):
+        print("::CEO Information::")
+        print(self.name)
+        print(self.join_date)
+        print(self.__salary)
+        print("---------------------")     
+emp1 = Employee("Nahid", date(2020, 1, 1), 25000)
+emp1.print_all()
+mng1 = Manager("Mehedi", date(2019, 7, 23), 100000)
+mng1.print_all()
+emp1.setmanagersalary(mng1, 50000)
+emp1.print_all()
+mng1.print_all()
+mng1.getmanagersalary(mng1)
+ceo1 = CEO("Najimul", date(2019, 4, 7), 150000)
+ceo1.print_all()
+ceo1.setmanagersalary(mng1, 200000)
+mng1.print_all()
+ceo1.setCEOsalary(ceo1, 450000)
+ceo1.getCEOsalary(ceo1)
+
+
+
+
